@@ -53,21 +53,18 @@ class PriceCompareSystem:
 
     def _initialize_data(self):
         """Инициализация тестовых данных"""
-        # Категории
+        
         self.categories[1] = Category(1, "Электроника")
         self.categories[2] = Category(2, "Бытовая техника")
 
-        # Магазины
         self.stores[1] = Store(1, "М.Видео", "https://mvideo.ru")
         self.stores[2] = Store(2, "Эльдорадо", "https://eldorado.ru")
         self.stores[3] = Store(3, "DNS", "https://dns-shop.ru")
 
-        # Товары
         self.products[1] = Product(1, "iPhone 15", self.categories[1])
         self.products[2] = Product(2, "Samsung Galaxy S24", self.categories[1])
         self.products[3] = Product(3, "Холодильник LG", self.categories[2])
 
-        # Цены
         self.prices.extend([
             Price(self.products[1], self.stores[1], 89990, "https://mvideo.ru/iphone15"),
             Price(self.products[1], self.stores[2], 87990, "https://eldorado.ru/iphone15"),
