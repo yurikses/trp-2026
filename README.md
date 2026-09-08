@@ -1,2 +1,2 @@
-# spo-2026
-SPO individual project
+# trp-2026
+TRP individual project
