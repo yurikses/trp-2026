@@ -1,0 +1,1 @@
+{"categories": [{"id": 1, "name": "Электроника"}, {"id": 2, "name": "Бытовая техника"}], "products": [{"id": 1, "name": "iPhone 15", "category_id": 1}, {"id": 2, "name": "Samsung Galaxy S24", "category_id": 1}, {"id": 3, "name": "Холодильник LG", "category_id": 2}]}
