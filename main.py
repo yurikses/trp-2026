@@ -1,9 +1,9 @@
 from pathlib import Path
 
-from prices import Price, compare_prices
-from products import Product, search_products
+from models import Price, compare_prices
+from models import Product, search_products
 from storage import DataRepository, load_data
-from users import User
+from models import User
 
 
 class PriceCompareSystem:

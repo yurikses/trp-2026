@@ -1,4 +1,4 @@
-from products import Category, Product, search_products
+from models.products import Category, Product, search_products
 
 
 def test_search_products_is_case_insensitive():

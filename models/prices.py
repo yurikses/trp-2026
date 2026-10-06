@@ -3,8 +3,8 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any
 
-from products import Product
-from stores import Store
+from models.products import Product
+from models.stores import Store
 
 
 @dataclass

@@ -3,10 +3,10 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from prices import Price
-from products import Category, Product
-from stores import Store
-from users import User
+from models.prices import Price
+from models.products import Category, Product
+from models.stores import Store
+from models.users import User
 
 
 class DataRepository:

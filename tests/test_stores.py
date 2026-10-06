@@ -1,4 +1,4 @@
-from stores import Store
+from models.stores import Store
 
 
 def test_store_keeps_name_and_url():

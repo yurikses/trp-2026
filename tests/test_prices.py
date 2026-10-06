@@ -1,6 +1,6 @@
-from prices import Price, compare_prices
-from products import Category, Product
-from stores import Store
+from models.prices import Price, compare_prices
+from models.products import Category, Product
+from models.stores import Store
 
 
 def test_compare_prices_sorts_by_price():

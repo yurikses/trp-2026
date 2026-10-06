@@ -1,5 +1,5 @@
-from products import Category, Product
-from users import User
+from models.products import Category, Product
+from models.users import User
 
 
 def test_user_favorites_are_independent():

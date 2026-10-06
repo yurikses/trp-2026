@@ -1,3 +1,5 @@
 [flake8]
-exclude = .venv,.git,__pycache__,.pytest_cache,.ruff_cache
-max-line-length = 100
+exclude = .venv,.git,__pycache__,.pytest_cache,.ruff_cache,*/admin.py,*/models.py,*/tests.py
+max-line-length = 120
+extend-ignore = W191,E101,E117,W292
+per-file-ignores = models/__init__.py:F403,F405

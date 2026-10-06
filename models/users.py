@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Any
 
-from products import Product
+from models.products import Product
 
 
 @dataclass
