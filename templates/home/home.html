@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-white rounded-3 shadow-sm">
+    <div class="d-flex align-items-center gap-4 flex-wrap">
+        <img src="{% static 'images/rubdiff-logo.svg' %}" alt="Rubdiff" class="img-fluid" style="max-width: 180px;">
+        <div>
+            <h1 class="display-5 fw-bold">Сравнение цен без лишнего поиска</h1>
+            <p class="lead">Rubdiff собирает предложения магазинов и помогает найти лучшую цену.</p>
+        </div>
+    </div>
+    <a class="btn btn-primary btn-lg" href="{% url 'products:product-list' %}">Перейти к товарам</a>
+</div>
+
+<div class="row g-3">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="h5">Каталог</h2>
+                <p class="mb-0">Товары и их категории.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="h5">Магазины</h2>
+                <p class="mb-0">Источники актуальных предложений.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="h5">Сравнение</h2>
+                <p class="mb-0">Цены отсортированы от меньшей к большей.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

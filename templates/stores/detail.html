@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ store.name }}{% endblock %}
+
+{% block content %}
+<div class="card mb-4 shadow-sm">
+    <div class="card-body">
+        <h1>{{ store.name }}</h1>
+        <a href="{{ store.url }}" target="_blank" rel="noreferrer">{{ store.url }}</a>
+    </div>
+</div>
+
+<h2 class="h4 mb-3">Предложения</h2>
+{% if prices %}
+<div class="row g-3">
+    {% for offer in prices %}
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3 class="h5">{{ offer.product.name }}</h3>
+                <p class="fs-5 mb-0">{{ offer.price|floatformat:2 }} ₽</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p class="text-muted">Предложения не найдены.</p>
+{% endif %}
+{% endblock %}

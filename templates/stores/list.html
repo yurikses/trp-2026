@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Магазины{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Магазины</h1>
+{% if stores %}
+<ul class="list-group">
+    {% for store in stores %}
+    <li class="list-group-item">
+        <a href="{% url 'stores:store-detail' store.id %}">{{ store.name }}</a>
+        <small class="d-block text-muted">{{ store.url }}</small>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<div class="alert alert-info">Магазинов пока нет.</div>
+{% endif %}
+{% endblock %}

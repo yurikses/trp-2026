@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ user.name }}{% endblock %}
+
+{% block content %}
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h1>{{ user.name }}</h1>
+        <p><a href="mailto:{{ user.email }}">{{ user.email }}</a></p>
+        <h2 class="h5">Избранные товары</h2>
+        {% if user.favorites %}
+        <ul class="list-group">
+            {% for product in user.favorites %}
+            <li class="list-group-item">
+                <a href="{% url 'products:product-detail' product.id %}">{{ product.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <ul class="list-group">
+            <li class="list-group-item">Избранное пусто</li>
+        </ul>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

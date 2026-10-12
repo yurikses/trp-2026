@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Категории{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Категории</h1>
+{% if categories %}
+<ul class="list-group">
+    {% for category in categories %}
+    <li class="list-group-item">
+        <a href="{% url 'categories:category-detail' category.id %}">{{ category.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<div class="alert alert-info">Категорий пока нет.</div>
+{% endif %}
+{% endblock %}

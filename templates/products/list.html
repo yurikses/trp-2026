@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Товары{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Товары</h1>
+{% if products %}
+<ul class="list-group">
+    {% for product in products %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <a href="{% url 'products:product-detail' product.id %}">{{ product.name }}</a>
+        <span class="badge text-bg-secondary">{{ product.category.name }}</span>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<div class="alert alert-info">Товаров пока нет.</div>
+{% endif %}
+{% endblock %}
