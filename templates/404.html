@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Страница не найдена{% endblock %}
+
+{% block content %}
+<div class="text-center py-5">
+    <p class="display-1 fw-bold text-primary mb-0">404</p>
+    <h1 class="mb-3">Страница не найдена</h1>
+    <p class="lead text-secondary mb-4">
+        Возможно, ссылка устарела или такой страницы больше нет.
+    </p>
+    <a class="btn btn-primary" href="{% url 'home:home' %}">Вернуться на главную</a>
+</div>
+{% endblock %}
